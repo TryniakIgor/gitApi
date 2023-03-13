@@ -25,7 +25,6 @@ async function getRepos() {
 
 function createRepos(repositories) {
     repositories.forEach((repo) => {
-        console.log(repositories.message);
         const repoDiv = document.createElement("div");
         repoDiv.classList.add('item');
         const repoName = document.createElement("h2");
@@ -41,7 +40,8 @@ function createRepos(repositories) {
     });
 }
 
-gitHubForm.addEventListener('change', () => {
+gitHubForm.addEventListener('submit', (event) => {
+    event.preventDefault();
     getRepos();
 })
 
