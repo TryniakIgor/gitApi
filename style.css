@@ -1,0 +1,62 @@
+header {
+    display: flex;
+        align-items :flex-start;
+      
+}
+
+
+#logoImg {
+    max-width: 80px;
+}
+
+
+#loader {
+    display: none;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5px;
+    border-radius: 50%;
+    color: var(--loader-color-primary, rgb(110, 192, 42));
+    border-top: var(--line-width, 10px) solid;
+    border-bottom: var(--line-width, 10px) solid;
+    width: var(--loader-width, 100px);
+    height: var(--loader-height, 100px);
+    animation: awesome-spin var(--animation-duration, 2s) linear infinite;
+   
+}
+
+#username{
+    border: 1px solid black;
+        border-radius: 7px;
+        box-shadow: inset 0px 0px 5px 0px rgba(0, 0, 0, 0.3);
+        font-size: medium;
+        width: 25%;
+}
+#repos{
+display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.item{
+    background-color: rgb(241, 211, 173);
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 3px 3px 3px rgb(121, 109, 109);
+    margin-right: auto;
+    width: calc(35% - 10px);
+    margin: 5px;
+    padding: 5px;
+
+}
+
+@keyframes awesome-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
