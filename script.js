@@ -17,10 +17,11 @@ async function getRepos() {
         const repositories = await response.json();
         console.log(repositories.message);
         createRepos(repositories);
-        loader.style.display = "none";
+
     } catch (error) {
         console.log(error.message);
     }
+    finally { loader.style.display = "none"; }
 }
 
 function createRepos(repositories) {
